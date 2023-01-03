@@ -70,6 +70,12 @@ TEMPLATES = [
             ],
         },
     },
+    {
+        'BACKEND': 'django.template.backends.jinja2.Jinja2',
+        'DIRS': [BASE_DIR / 'templates']
+        ,
+        'APP_DIRS': True,
+    },
 ]
 
 WSGI_APPLICATION = 'aitools.wsgi.application'
