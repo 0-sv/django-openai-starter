@@ -1,6 +1,8 @@
 from django.shortcuts import render
 
+from .forms import QuestionForm
 
-# Create your views here.
+
 def index(request):
-    return render(request, 'sql/poc.html')
+    form = QuestionForm()
+    return render(request, 'sql/poc.html', {'form': form})
