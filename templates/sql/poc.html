@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <section class="section">
+
+        <div class="container">
+            <form action="/ask/" method="post">
+                <label for="question">question</label>
+                <br>
+                <input id="question" type="text" name="question">
+                <input type="submit" value="ask">
+            </form>
+        </div>
+    </section>
+{% endblock %}
