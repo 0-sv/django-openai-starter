@@ -8,6 +8,7 @@ def index(request):
     if request.method == 'POST':
         form = QuestionForm(request.POST)
         if form.is_valid():
+            # ai logic here, send output to browser
             output = "some generated text"
     else:
         form = QuestionForm()
