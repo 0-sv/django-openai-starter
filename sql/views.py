@@ -8,8 +8,7 @@ def index(request):
     if request.method == 'POST':
         form = QuestionForm(request.POST)
         if form.is_valid():
-            # ai logic here, send output to browser
-            output = "some generated text"
+            output = form.ask_openai(form.cleaned_data['question'])
     else:
         form = QuestionForm()
     return render(request, 'sql/poc.html', {'form': form, 'output': output})
